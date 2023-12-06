@@ -26,8 +26,8 @@ jobs:
 
       - name: Build RPM
         run: |
-          cp rpm/calc_files.spec ~/rpmbuild/SPECS/
-          cd rpmbuild/SOURCES/
+          cp rpm/calcfiles.spec ~/rpmbuild/SPECS/
+          cd ~/rpmbuild/SOURCES/
           wget https://github.com/timlftv/timliftiev-os/archive/main.zip
           cd ../../
           rpmbuild -bs --define "dist .generic" rpmbuild/SPECS/calcfiles.spec
